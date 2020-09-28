@@ -6,7 +6,19 @@ class Main {
   static AtomicInteger[] counts;
   static int WIDTH = 16;
   static int OPS = 1000;
+  // bitonic: bitonic counting network of WIDTH
+  // counts: atomic integers incremented by threads
+  // WIDTH: number of threads / width of network
+  // OPS: number of increments
 
+  // Each unbalanced thread tries to increment a
+  // random count. At the end, the counts would
+  // not be balanced.
+  // 
+  // Each balanced thread tries to increment a
+  // random count, but this time, selected through
+  // a bitonic network. At the end, the counts
+  // should be balanced.
   static Thread thread(int id, boolean balance) {
     return new Thread(() -> {
       for (int i=0; i<OPS; i++) {
@@ -19,6 +31,7 @@ class Main {
     });
   }
 
+  // Initialize bitonic network and counts.
   static void setup() {
     bitonic = new BitonicNetwork(WIDTH);
     counts = new AtomicInteger[WIDTH];
@@ -26,6 +39,7 @@ class Main {
       counts[i] = new AtomicInteger(0);
   }
 
+  // Test either unbalanced or balanced threads.
   static void testThreads(boolean balance) {
     setup();
     Thread[] t = new Thread[WIDTH];
@@ -40,6 +54,8 @@ class Main {
     catch(InterruptedException e) {}
   }
 
+  // Check if counts are balanced. At maximum
+  // counts should be separated by 1.
   static boolean isBalanced() {
     int v = counts[0].get();
     for (int i=0; i<WIDTH; i++)
@@ -47,6 +63,9 @@ class Main {
     return true;
   }
 
+  // Test both unbalanced and balanced threads
+  // to check if counts stay balanced after they
+  // run their increments.
   public static void main(String[] args) {
     log("Starting unbalanced threads ...");
     testThreads(false);
