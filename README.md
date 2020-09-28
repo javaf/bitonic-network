@@ -56,11 +56,11 @@ See [Balancer.java], [MergerNetwork.java],
 [BitonicNetwork.java] for code, [Main.java] for
 test, and [repl.it] for output.
 
-[Balancer.java]: https://repl.it/@wolfram77/fine-set#Balancer.java
-[MergerNetwork.java]: https://repl.it/@wolfram77/fine-set#MergerNetwork.java
-[BitonicNetwork.java]: https://repl.it/@wolfram77/fine-set#BitonicNetwork.java
-[Main.java]: https://repl.it/@wolfram77/fine-set#Main.java
-[repl.it]: https://fine-set.wolfram77.repl.run
+[Balancer.java]: https://repl.it/@wolfram77/bitonic-network#Balancer.java
+[MergerNetwork.java]: https://repl.it/@wolfram77/bitonic-network#MergerNetwork.java
+[BitonicNetwork.java]: https://repl.it/@wolfram77/bitonic-network#BitonicNetwork.java
+[Main.java]: https://repl.it/@wolfram77/bitonic-network#Main.java
+[repl.it]: https://bitonic-network.wolfram77.repl.run
 
 
 ### references
