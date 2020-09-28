@@ -1,6 +1,6 @@
-// A balancer is a simple switch with two input
+// A Balancer is a simple switch with two input
 // and two output wires. Tokens arrive on the
-// balancer’s input wires at arbitrary times,
+// Balancer’s input wires at arbitrary times,
 // and emerge on their output wires, at some later
 // Given a stream of input tokens, it sends one
 // token to the top output wire, and the next to
