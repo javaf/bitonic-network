@@ -2,6 +2,11 @@ Bitonic network is a balanced counting network that
 allows processes to decompose operations, like
 counting, and reduce memory contention.
 
+> **Course**: [Concurrent Data Structures], Monsoon 2020\
+> **Taught by**: Prof. Govindarajulu Regeti
+
+[Concurrent Data Structures]: https://github.com/iiithf/concurrent-data-structures
+
 ```java
 Balancer:
 A Balancer is a simple switch with two input
